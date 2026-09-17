@@ -1,11 +1,15 @@
-MONOLITH BUILDERS INC. — WEBSITE V4
+MONOLITH BUILDERS INC. — WEBSITE V6
 Domain: monolithbuildersinc.com
 Phone: (279) 675-0675
-Temporary email: info@monolithbuildersinc.com
-CSLB: #1160757
+Email: info@monolithbuildersinc.com
+CSLB License: #1160757
 
-V4 adds a four-step guided Project Planner / Estimate Request workflow.
-It does NOT show invented construction prices. Pricing can be added after Monolith Builders defines its approved pricing assumptions.
-The final button currently opens the visitor's email application with a prepared request. A real server-side form/CRM should replace this before launch.
+V6 upgrades the live V5 site toward the approved premium silver/black visual direction.
+It includes responsive navigation, redesigned hero/services/about/process sections,
+and a four-step project request planner. Public pricing is not shown.
 
-Permanent business email updated to: info@monolithbuildersinc.com
+IMPORTANT:
+- Service imagery must be representative unless Monolith Builders supplies actual project photos.
+- The current estimate submission uses mailto and opens the visitor's email application.
+  A production form backend/CRM can replace this later.
+- When connecting the GoDaddy domain, preserve existing email MX/TXT/SPF/DKIM records.
