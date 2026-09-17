@@ -1,1 +1,51 @@
-let step=1;const steps=[...document.querySelectorAll(".step")],next=document.getElementById("next"),back=document.getElementById("back"),send=document.getElementById("send"),label=document.getElementById("stepLabel");function show(){steps.forEach((x,i)=>x.classList.toggle("active",i===step-1));label.textContent=`STEP ${step} OF 4`;back.hidden=step===1;next.hidden=step===4;send.hidden=step!==4}next.onclick=()=>{if(step===1&&!document.querySelector('input[name="project"]:checked')){alert("Please select a project type.");return}if(step<4){step++;show()}};back.onclick=()=>{if(step>1){step--;show()}};document.getElementById("estimateForm").onsubmit=e=>{e.preventDefault();const f=new FormData(e.target),lines=["Monolith Builders Inc. — Project Request","",`Project: ${f.get("project")||""}`,`Approx. size: ${f.get("size")||""}`,`Finish: ${f.get("finish")||""}`,`Details: ${f.get("details")||""}`,`Location: ${f.get("location")||""}`,`Timeline: ${f.get("timeline")||""}`,"",`Name: ${f.get("name")||""}`,`Phone: ${f.get("phone")||""}`,`Email: ${f.get("email")||""}`];location.href=`mailto:info@monolithbuildersinc.com?subject=${encodeURIComponent("Project Estimate Request")}&body=${encodeURIComponent(lines.join("\n"))}`};show();
+document.addEventListener('DOMContentLoaded', () => {
+  const images = [...document.querySelectorAll('.galleryImage')];
+  const lightbox = document.getElementById('lightbox');
+  if (!lightbox || !images.length) return;
+  const view = lightbox.querySelector('.lightboxImage');
+  const count = lightbox.querySelector('.lightboxCount');
+  const closeBtn = lightbox.querySelector('.lightboxClose');
+  const prevBtn = lightbox.querySelector('.lightboxPrev');
+  const nextBtn = lightbox.querySelector('.lightboxNext');
+  let current = 0;
+  let touchStartX = 0;
+
+  function show(i) {
+    current = (i + images.length) % images.length;
+    view.src = images[current].src;
+    view.alt = images[current].alt;
+    count.textContent = `${current + 1} / ${images.length}`;
+  }
+  function open(i) {
+    show(i);
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+    closeBtn.focus();
+  }
+  function close() {
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+    images[current].focus();
+  }
+  images.forEach((img,i) => {
+    img.addEventListener('click', () => open(i));
+    img.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(i); } });
+  });
+  closeBtn.addEventListener('click', close);
+  prevBtn.addEventListener('click', () => show(current - 1));
+  nextBtn.addEventListener('click', () => show(current + 1));
+  lightbox.addEventListener('click', e => { if (e.target === lightbox) close(); });
+  document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') close();
+    if (e.key === 'ArrowLeft') show(current - 1);
+    if (e.key === 'ArrowRight') show(current + 1);
+  });
+  lightbox.addEventListener('touchstart', e => { touchStartX = e.changedTouches[0].screenX; }, {passive:true});
+  lightbox.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].screenX - touchStartX;
+    if (Math.abs(dx) > 45) show(current + (dx < 0 ? 1 : -1));
+  }, {passive:true});
+});
