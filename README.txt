@@ -1,15 +1,13 @@
-MONOLITH BUILDERS INC. — WEBSITE V6
+MONOLITH BUILDERS INC. — WEBSITE V7
 Domain: monolithbuildersinc.com
 Phone: (279) 675-0675
 Email: info@monolithbuildersinc.com
 CSLB License: #1160757
 
-V6 upgrades the live V5 site toward the approved premium silver/black visual direction.
-It includes responsive navigation, redesigned hero/services/about/process sections,
-and a four-step project request planner. Public pricing is not shown.
+V7 adds a photographic luxury hero and large kitchen/bathroom remodeling showcase imagery while preserving the silver/black premium direction, services, process, project planner, phone, email, and license information.
 
 IMPORTANT:
-- Service imagery must be representative unless Monolith Builders supplies actual project photos.
+- All supplied remodeling imagery is representative design imagery and is not presented as completed Monolith Builders projects.
+- Public pricing is intentionally not shown.
 - The current estimate submission uses mailto and opens the visitor's email application.
-  A production form backend/CRM can replace this later.
-- When connecting the GoDaddy domain, preserve existing email MX/TXT/SPF/DKIM records.
+- Preserve GoDaddy email MX/TXT/SPF/DKIM records when changing website DNS.
