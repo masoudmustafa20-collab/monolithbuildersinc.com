@@ -1,10 +1,10 @@
-MONOLITH BUILDERS INC. — WEBSITE V7
+MONOLITH BUILDERS INC. — WEBSITE V8
 Domain: monolithbuildersinc.com
 Phone: (279) 675-0675
 Email: info@monolithbuildersinc.com
 CSLB License: #1160757
 
-V7 adds a photographic luxury hero and large kitchen/bathroom remodeling showcase imagery while preserving the silver/black premium direction, services, process, project planner, phone, email, and license information.
+V8 enlarges the finished kitchen and bathroom showcase so the remodeling imagery has stronger visual impact on desktop and mobile, while preserving the V7 premium silver/black design, services, process, project planner, contact information and license information.
 
 IMPORTANT:
 - All supplied remodeling imagery is representative design imagery and is not presented as completed Monolith Builders projects.
