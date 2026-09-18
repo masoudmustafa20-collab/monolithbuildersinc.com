@@ -38,4 +38,27 @@
 <button class="lightboxNext" aria-label="Next image">›</button>
 <div class="lightboxCount" aria-live="polite"></div>
 </div>
-<script src="script-v16.js"></script></body></html>
+<script src="script-v16.js"></script>
+<script>
+/* V17 gallery filter hardening: direct event delegation + hidden attribute. */
+(function(){
+  var filters=document.querySelector('.filters');
+  var gallery=document.querySelector('.inspiration');
+  if(!filters||!gallery)return;
+  filters.addEventListener('click',function(e){
+    var btn=e.target.closest('button[data-filter]');
+    if(!btn||!filters.contains(btn))return;
+    e.preventDefault();
+    var wanted=(btn.getAttribute('data-filter')||'all').toLowerCase();
+    filters.querySelectorAll('button[data-filter]').forEach(function(b){b.classList.toggle('active',b===btn);});
+    gallery.querySelectorAll('figure[data-cat]').forEach(function(card){
+      var cat=(card.getAttribute('data-cat')||'').toLowerCase();
+      var show=wanted==='all'||cat===wanted;
+      card.hidden=!show;
+      card.classList.toggle('hidden',!show);
+      if(show){card.style.removeProperty('display');}
+      else{card.style.setProperty('display','none','important');}
+    });
+  });
+})();
+</script></body></html>
