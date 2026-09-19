@@ -128,7 +128,8 @@
    panel.classList.remove('open');panel.setAttribute('aria-hidden','true');document.body.classList.remove('serviceJourneyOpen');
    const choice=[...document.querySelectorAll('.choiceGrid button')].find(b=>b.dataset.value==='Kitchen Remodel');
    if(choice) choice.click();
-   document.querySelectorAll('.plannerStep').forEach((s,i)=>s.classList.toggle('active',i===1));
+   const firstNext=document.querySelector('.plannerStep[data-step="1"] .plannerNext');
+   if(firstNext) firstNext.click();
    setTimeout(()=>document.getElementById('planner').scrollIntoView({behavior:'smooth',block:'start'}),50);
  });
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panel.classList.contains('open'))close();});
