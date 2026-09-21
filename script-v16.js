@@ -14,6 +14,8 @@
     if(current===0&&!project){alert('Please choose a project type first.');return} show(current+1);
   }));
   document.querySelectorAll('.plannerBack').forEach(b=>b.addEventListener('click',()=>show(current-1)));
+  const reset=document.querySelector('#plannerForm'); 
+  document.querySelector('.plannerReset')?.onclick=()=>{reset.reset();project='';show(0);};
   document.querySelector('#plannerForm')?.addEventListener('submit',e=>{
     e.preventDefault(); const f=new FormData(e.currentTarget);
     const needs=[...document.querySelectorAll('.checkGrid input:checked')].map(x=>x.value).join(', ')||'Not specified';
