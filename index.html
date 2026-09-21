@@ -134,4 +134,5 @@
  });
  document.addEventListener('keydown',e=>{if(e.key==='Escape'&&panel.classList.contains('open'))close();});
 })();
+document.querySelector('a.btn.outline[href="#services"]').addEventListener('click',function(e){e.preventDefault();document.getElementById('services').scrollIntoView({behavior:'smooth',block:'start'});});
 </script></body></html>
