@@ -255,11 +255,7 @@ document.querySelectorAll('.topicOpen').forEach(function(btn){btn.addEventListen
 function closePanel(){panel.classList.remove('open');document.getElementById('services').scrollIntoView({behavior:'smooth',block:'start'})}
 document.querySelector('.serviceBackV23').addEventListener('click',closePanel);document.querySelector('.serviceCloseV23').addEventListener('click',closePanel);
 document.querySelector('.requestServiceV23').addEventListener('click',function(){var p=document.getElementById('planner');if(p)p.scrollIntoView({behavior:'smooth',block:'start'})});
-  document.querySelectorAll('.topicOpen').forEach(function(btn){
-  btn.addEventListener('click', function(){
-    document.getElementById('services').classList.remove('open');
-  });
-});
+
 
   
 });
