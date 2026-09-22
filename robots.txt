@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://monolithbuildersinc.com/sitemap.xml
