@@ -75,7 +75,7 @@
   </div>
   <div class="project-grid">
     <article class="project-card" data-gallery="kitchen" role="group">
-      <img src="assets/remodeling-kitchen-color.jpg" alt="Finished kitchen remodeling project" loading="lazy" data-open-service="kitchen-remodeling" role="button" tabindex="0" aria-label="Open Kitchen Remodeling gallery" decoding="async">
+      <img src="assets/v14-kitchen-2.jpg" alt="Finished kitchen remodeling project" loading="lazy" data-open-service="kitchen-remodeling" role="button" tabindex="0" aria-label="Open Kitchen Remodeling gallery" decoding="async">
       <div class="project-copy"><h3>Kitchen Remodeling</h3><p>Functional upgrades, complete renovations, and custom kitchens.</p></div>
     
 <div class="topic-actions remodeling-topic-actions">
@@ -83,7 +83,7 @@
 </div>
 </article>
     <article class="project-card" data-gallery="bathroom" role="group">
-      <img src="assets/remodeling-bathroom-color.jpg" alt="Finished bathroom remodeling project" loading="lazy" decoding="async">
+      <img src="assets/v14-bathroom-1.jpg" alt="Finished bathroom remodeling project" loading="lazy" decoding="async">
       <div class="project-copy"><h3>Bathroom Remodeling</h3><p>Comfortable everyday bathrooms through refined custom spaces.</p></div>
     
 <div class="topic-actions remodeling-topic-actions">
@@ -91,7 +91,7 @@
 </div>
 </article>
     <article class="project-card" data-gallery="living" role="group">
-      <img src="assets/remodeling-living-room-color.jpg" alt="Finished living room remodeling project" loading="lazy" decoding="async">
+      <img src="assets/v14-interior-2.jpg" alt="Finished living room remodeling project" loading="lazy" decoding="async">
       <div class="project-copy"><h3>Living Room Remodeling</h3><p>Updated layouts, finishes, lighting, flooring, and gathering spaces.</p></div>
     
 <div class="topic-actions remodeling-topic-actions">
@@ -99,7 +99,7 @@
 </div>
 </article>
     <article class="project-card" data-gallery="bedroom" role="group">
-      <img src="assets/remodeling-bedroom-color.jpg" alt="Finished bedroom remodeling project" loading="lazy" decoding="async">
+      <img src="assets/v14-interior-2.jpg" alt="Finished bedroom remodeling project" loading="lazy" decoding="async">
       <div class="project-copy"><h3>Bedroom Remodeling</h3><p>Clean, comfortable bedroom updates tailored to your home and budget.</p></div>
     
 <div class="topic-actions remodeling-topic-actions">
@@ -107,7 +107,7 @@
 </div>
 </article>
     <article class="project-card" data-gallery="outdoor" role="group">
-      <img src="assets/remodeling-outdoor-living-color.jpg" alt="Finished outdoor remodeling project" loading="lazy" decoding="async">
+      <img src="assets/v14-outdoor-1.jpg" alt="Finished outdoor remodeling project" loading="lazy" decoding="async">
       <div class="project-copy"><h3>Outdoor Living</h3><p>Patios, exterior living areas, and improvements that extend your home outdoors.</p></div>
     
 <div class="topic-actions remodeling-topic-actions">
@@ -115,7 +115,7 @@
 </div>
 </article>
     <article class="project-card" data-gallery="hvac" role="group">
-      <img src="assets/remodeling-hvac-color.jpg" alt="Home improvement and HVAC project" loading="lazy" decoding="async">
+      <img src="assets/v14-addition-1.jpg" alt="Home improvement and HVAC project" loading="lazy" decoding="async">
       <div class="project-copy"><h3>Heating &amp; Cooling</h3><p>HVAC improvements coordinated with your remodeling project.</p></div>
     
 <div class="topic-actions remodeling-topic-actions">
@@ -611,42 +611,6 @@
     <a class="request-service gallery-request gallery-bottom-request" href="#project-planner" data-service-name="Heating & Cooling">REQUEST THIS SERVICE</a>
   </div>
 </section>
-
-
-<script>
-/* Kitchen-only MORE repair. No other service navigation is changed. */
-(function () {
-  function openKitchen(event) {
-    if (event) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-    var gallery = document.getElementById('kitchen-remodeling-gallery');
-    if (!gallery) return;
-    document.querySelectorAll('.service-gallery-view').forEach(function (g) {
-      g.classList.remove('open', 'active', 'is-open');
-      g.setAttribute('aria-hidden', 'true');
-    });
-    gallery.classList.add('open', 'active', 'is-open');
-    gallery.setAttribute('aria-hidden', 'false');
-    document.body.classList.add('service-gallery-open');
-    gallery.scrollIntoView({behavior:'auto', block:'start'});
-    var back = gallery.querySelector('.gallery-back');
-    if (back) setTimeout(function(){ back.focus({preventScroll:true}); }, 50);
-  }
-
-  document.addEventListener('click', function (event) {
-    var trigger = event.target.closest('[data-open-service="kitchen-remodeling"]');
-    if (trigger) openKitchen(event);
-  }, true);
-
-  document.addEventListener('keydown', function (event) {
-    if (event.key !== 'Enter' && event.key !== ' ') return;
-    var trigger = event.target.closest('[data-open-service="kitchen-remodeling"]');
-    if (trigger) openKitchen(event);
-  }, true);
-})();
-</script>
 
 </body>
 </html>
