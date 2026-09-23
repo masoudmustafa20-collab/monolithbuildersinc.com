@@ -612,5 +612,41 @@
   </div>
 </section>
 
+
+<script>
+/* Kitchen-only MORE repair. No other service navigation is changed. */
+(function () {
+  function openKitchen(event) {
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    var gallery = document.getElementById('kitchen-remodeling-gallery');
+    if (!gallery) return;
+    document.querySelectorAll('.service-gallery-view').forEach(function (g) {
+      g.classList.remove('open', 'active', 'is-open');
+      g.setAttribute('aria-hidden', 'true');
+    });
+    gallery.classList.add('open', 'active', 'is-open');
+    gallery.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('service-gallery-open');
+    gallery.scrollIntoView({behavior:'auto', block:'start'});
+    var back = gallery.querySelector('.gallery-back');
+    if (back) setTimeout(function(){ back.focus({preventScroll:true}); }, 50);
+  }
+
+  document.addEventListener('click', function (event) {
+    var trigger = event.target.closest('[data-open-service="kitchen-remodeling"]');
+    if (trigger) openKitchen(event);
+  }, true);
+
+  document.addEventListener('keydown', function (event) {
+    if (event.key !== 'Enter' && event.key !== ' ') return;
+    var trigger = event.target.closest('[data-open-service="kitchen-remodeling"]');
+    if (trigger) openKitchen(event);
+  }, true);
+})();
+</script>
+
 </body>
 </html>
