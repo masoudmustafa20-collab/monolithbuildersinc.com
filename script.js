@@ -15,6 +15,7 @@ function showPhoto(index) {
   const multiple = gallery.length > 1;
   prevButton.style.display = multiple ? 'block' : 'none';
   nextButton.style.display = multiple ? 'block' : 'none';
+  lightbox.scrollTop = 0;
 }
 function openGallery(trigger) {
   gallery = trigger.dataset.gallery.split(',').map(s => s.trim()).filter(Boolean);
