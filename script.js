@@ -390,6 +390,7 @@ document.addEventListener("DOMContentLoaded", function(){
       gallery.setAttribute("aria-hidden","false");
       document.body.style.overflow = "hidden";
       gallery.scrollTop = 0;
+      requestAnimationFrame(() => { gallery.scrollTop = 0; });
     });
   });
 
