@@ -540,7 +540,7 @@ img.image-load-error{
   margin-right:auto;
 }
 .service-gallery-inner{
-  min-height:calc(100vh - 90px);
+  min-height:0;
   display:flex;
   flex-direction:column;
 }
