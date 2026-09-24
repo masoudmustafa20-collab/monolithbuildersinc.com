@@ -509,7 +509,7 @@ document.addEventListener("DOMContentLoaded", function(){
       current = (i + imgs.length) % imgs.length;
       imgs.forEach((img, n) => img.classList.toggle("is-gallery-active", n === current));
       counter.textContent = (current + 1) + " / " + imgs.length;
-      view.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ top: view.offsetTop, behavior: "smooth" });
     }
 
     imgs.forEach(img => img.addEventListener("click", () => show(current + 1)));
