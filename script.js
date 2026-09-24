@@ -526,6 +526,7 @@ document.addEventListener("DOMContentLoaded", function(){
     const observer = new MutationObserver(function(){
       if (view.classList.contains("is-open")) {
         show(0);
+        view.scrollTop = 0;
         setTimeout(() => view.focus({preventScroll:true}), 0);
       }
     });
