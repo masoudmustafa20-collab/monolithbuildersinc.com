@@ -532,7 +532,7 @@ document.addEventListener("DOMContentLoaded", function(){
       }
     });
     observer.observe(view, {attributes:true, attributeFilter:["class"]});
-    show(0);
+    
   });
 });
 
