@@ -1081,7 +1081,7 @@ body {
   background: #fff;
   color: #111;
   text-align: center;
-  padding: 54px 20px 20px;
+  padding: 70px 20px 55px;
 }
 
 .project-choice-heading p {
@@ -1100,7 +1100,7 @@ body {
 .home-project-choices {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 100%;
+  width: 70%;
 }
 .home-project-choices img {
   display: block;
