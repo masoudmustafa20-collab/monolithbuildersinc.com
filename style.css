@@ -1088,6 +1088,7 @@ body {
   margin: 0 0 18px;
   position: relative;
   z-index: 2;
+  transform: translateY(-25px);
   color: #d5a62e;
   font-size: .78rem;
   font-weight: 800;
@@ -1095,6 +1096,8 @@ body {
 }
 
 .project-choice-heading h2 {
+  position: relative;
+  z-index: 1;
   margin: 0;
   font-size: clamp(1.8rem, 3vw, 2.8rem);
 }
