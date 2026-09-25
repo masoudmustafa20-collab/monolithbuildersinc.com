@@ -787,7 +787,7 @@ img.image-load-error{
 
   .service-gallery-inner{
     width:100%;
-    min-height:100dvh;
+   min-height:0;
     padding-left:14px;
     padding-right:14px;
     box-sizing:border-box;
