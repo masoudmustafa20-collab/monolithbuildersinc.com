@@ -1100,11 +1100,12 @@ body {
 .home-project-choices {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 70%;
-  margin: 0 auto;
+  width: 100%;
+  
 }
 .home-project-choices img {
   display: block;
-  width: 100%;
+  width: 70%;
+  margin: 0 auto;
   height: auto;
 }
