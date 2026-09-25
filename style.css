@@ -1085,7 +1085,9 @@ body {
 }
 
 .project-choice-heading p {
-  margin: 0 0 8px;
+  margin: 0 0 18px;
+  position: relative;
+  z-index: 2;
   color: #d5a62e;
   font-size: .78rem;
   font-weight: 800;
