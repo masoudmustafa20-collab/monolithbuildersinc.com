@@ -1096,3 +1096,14 @@ body {
   margin: 0;
   font-size: clamp(2rem, 4vw, 3.5rem);
 }
+
+.home-project-choices {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+.home-project-choices img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
