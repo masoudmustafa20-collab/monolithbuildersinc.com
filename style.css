@@ -1068,6 +1068,7 @@ body {
   color: #111;
   border-color: #999;
 }
+.service-gallery-images { background: #fff !important; }
 
 /* Keep normal text readable on white */
 .construction-flow p,
