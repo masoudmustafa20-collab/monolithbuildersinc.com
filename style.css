@@ -1119,7 +1119,7 @@ body {
 }
 
 
-.step-back {
+.step-back, .gallery-back {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
