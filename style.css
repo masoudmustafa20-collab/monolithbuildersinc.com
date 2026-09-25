@@ -508,9 +508,9 @@ img.image-load-error{
   align-items:center;
   min-height:44px;
   padding:10px 16px;
-  border:1px solid rgba(212,175,55,.75);
-  background:#111;
-  color:#fff;
+  border: none;
+  background:transparent;
+  color:#111;
   text-decoration:none;
   font:inherit;
   font-weight:700;
