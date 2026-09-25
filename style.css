@@ -986,3 +986,93 @@ a[href^="mailto:"]{
 }
 .hvac-category-visual span{font-weight:800;letter-spacing:.08em;font-size:clamp(22px,2vw,34px)}
 .hvac-category-visual small{margin-top:10px;color:#d5a62e;letter-spacing:.18em;font-weight:700}
+
+
+/* ===== WHITE CONTENT THEME ===== */
+/* Keep the main/top hero unchanged */
+
+body {
+  background: #fff;
+}
+
+/* Main remodeling area */
+#remodeling-projects {
+  background: #fff;
+  color: #111;
+}
+
+#remodeling-projects .project-card {
+  background: #fff;
+  color: #111;
+  border: 1px solid #ddd;
+  box-shadow: 0 8px 24px rgba(0,0,0,.08);
+}
+
+#remodeling-projects .project-copy p {
+  color: #555;
+}
+
+/* General construction */
+.construction-flow {
+  background: #fff;
+  color: #111;
+}
+
+/* Individual service/topic cards */
+.subservice-card,
+.construction-topic,
+.remodeling-topic {
+  background: #fff;
+  color: #111;
+  border-color: #ddd;
+}
+
+.subservice-more,
+.topic-more {
+  color: #111;
+}
+
+/* How It Works */
+.how-it-works {
+  background: #fff;
+  color: #111;
+}
+
+/* Process section */
+.process-section {
+  background: #fff;
+  color: #111;
+}
+
+.process-grid article {
+  background: #fff;
+  color: #111;
+  border-color: #ddd;
+}
+
+/* Opened service/gallery pages */
+.service-gallery-view {
+  background: #fff;
+  color: #111;
+}
+
+.service-gallery-topbar {
+  background: #fff;
+  color: #111;
+  border-bottom: 1px solid #ddd;
+}
+
+.gallery-back,
+.gallery-close,
+.gallery-nav button {
+  color: #111;
+  border-color: #999;
+}
+
+/* Keep normal text readable on white */
+.construction-flow p,
+.how-it-works p,
+.process-section p,
+.subservice-copy p {
+  color: #555;
+}
