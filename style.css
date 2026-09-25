@@ -1076,3 +1076,23 @@ body {
 .subservice-copy p {
   color: #555;
 }
+/* Project choice heading */
+.project-choice-heading {
+  background: #fff;
+  color: #111;
+  text-align: center;
+  padding: 54px 20px 20px;
+}
+
+.project-choice-heading p {
+  margin: 0 0 8px;
+  color: #d5a62e;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+}
+
+.project-choice-heading h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
