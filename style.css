@@ -1126,3 +1126,4 @@ body {
   border: none !important;
   box-shadow: none !important;
   }
+@media(max-width:720px){.master>img{width:100%!important;height:auto!important;object-fit:contain!important;}}
