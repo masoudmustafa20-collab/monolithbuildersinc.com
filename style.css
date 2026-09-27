@@ -1127,3 +1127,4 @@ body {
   box-shadow: none !important;
   }
 @media(max-width:720px){.master>img{width:100%!important;height:auto!important;object-fit:contain!important;}}
+@media(max-width:720px){.master{height:auto!important;min-height:0!important;}}
