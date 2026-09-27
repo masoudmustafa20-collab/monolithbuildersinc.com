@@ -1101,6 +1101,7 @@ body {
   z-index: 1;
   margin: 0;
   font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1.15;
 }
 
 .home-project-choices {
