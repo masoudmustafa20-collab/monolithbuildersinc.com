@@ -631,13 +631,7 @@ img.image-load-error{
   background:#111;
   padding-bottom:14px;
 }
-.gallery-bottom-request{
-  position:relative !important;
-  inset:auto !important;
-  display:inline-flex !important;
-  margin:28px 0 24px !important;
-  align-self:flex-start;
-}
+
 
 
 /* v49 — consistent controls on every opened service/gallery step */
@@ -648,16 +642,7 @@ img.image-load-error{
 .service-gallery-view .service-gallery-images{
   order:1;
 }
-.service-gallery-view .gallery-bottom-request{
-  order:2;
-  margin-top:28px !important;
-  margin-bottom:30px !important;
-  align-self:flex-start !important;
-}
-.service-gallery-view .gallery-bottom-request{
-  position:static !important;
-  transform:none !important;
-}
+
 
 
 /* v50 — Project Planner follows the same approved step rules */
@@ -697,11 +682,7 @@ img.image-load-error{
   position:relative;
   z-index:3;
 }
-.gallery-bottom-request{
-  position:relative !important;
-  z-index:3;
-  clear:both;
-}
+
 .construction-topic-card{
   min-height:44px;
   touch-action:manipulation;
@@ -716,10 +697,7 @@ img.image-load-error{
 .service-gallery-images{
   flex:1 1 auto;
 }
-.gallery-bottom-request{
-  flex:0 0 auto;
-  margin-top:24px !important;
-}
+
 
 
 /* v53 — planner navigation follows the selected service step */
@@ -1144,19 +1122,7 @@ body {
   margin-bottom: 80px;
 }
 
-.service-gallery-view .gallery-bottom-request {
-  display: inline-flex !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-  position: relative !important;
-  z-index: 10 !important;
-}
 
-.service-gallery-inner {
-  display: flex !important;
-  flex-direction: column !important;
-}
 
-.service-gallery-inner .gallery-bottom-request {
-  flex: 0 0 auto !important;
-}
+
+
