@@ -1143,3 +1143,11 @@ body {
 #construction-projects .construction-card {
   margin-bottom: 80px;
 }
+
+.service-gallery-view .gallery-bottom-request {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  z-index: 10 !important;
+}
