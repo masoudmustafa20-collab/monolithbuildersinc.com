@@ -1141,3 +1141,77 @@ body {
   position: relative;
   z-index: 5;
 }
+.phone-hotspot {
+  position: absolute;
+  left: 73%;
+  top: 1%;
+  width: 12%;
+  height: 8%;
+  z-index: 20;
+}
+
+.master {
+  position: relative;
+}
+
+.master .hotspot {
+  position: absolute;
+  display: block;
+  z-index: 50;
+}
+
+.phone-hotspot {
+  top: 1%;
+  left: 74%;
+  width: 10%;
+  height: 8%;
+}
+
+.email-hotspot {
+  top: 1%;
+  left: 84%;
+  width: 15%;
+  height: 8%;
+}
+
+.home-hotspot {
+  top: 9%;
+  left: 28%;
+  width: 6%;
+  height: 7%;
+}
+
+.services-hotspot {
+  top: 9%;
+  left: 35%;
+  width: 8%;
+  height: 7%;
+}
+
+.gallery-hotspot {
+  top: 9%;
+  left: 44%;
+  width: 7%;
+  height: 7%;
+}
+
+.planner-hotspot {
+  top: 9%;
+  left: 52%;
+  width: 12%;
+  height: 7%;
+}
+
+.about-hotspot {
+  top: 9%;
+  left: 65%;
+  width: 7%;
+  height: 7%;
+}
+
+.contact-hotspot {
+  top: 9%;
+  left: 73%;
+  width: 8%;
+  height: 7%;
+}
