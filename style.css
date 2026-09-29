@@ -1132,3 +1132,14 @@ body {
 #construction-projects {
   text-align: center;
 }
+
+#construction-projects .construction-card img {
+  display: block;
+  width: 70%;
+  height: auto;
+  margin: 20px auto 40px;
+}
+
+#construction-projects .construction-card {
+  margin-bottom: 80px;
+}
