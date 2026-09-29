@@ -1151,3 +1151,12 @@ body {
   position: relative !important;
   z-index: 10 !important;
 }
+
+.service-gallery-inner {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.service-gallery-inner .gallery-bottom-request {
+  flex: 0 0 auto !important;
+}
