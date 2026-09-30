@@ -59,10 +59,10 @@
   <main>
     
     <section id="home" class="master" aria-label="Monolith Builders homepage introduction">
-    <nav class="top-nav"><a href="#home">Home</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#project-planner">Project Planner</a><a href="#about">About</a><a href="#quote-request">Contact</a><a class="nav-quote" href="#quote-request">GET A QUOTE →</a></nav>
+    <nav class="top-nav"><a href="#home">Home</a><a href="#services-start">Services</a><a href="#gallery">Gallery</a><a href="#planner-start">Project Planner</a><a href="#about-start">About</a><a href="#contact-start">Contact</a><a class="nav-quote" href="#contact-start">GET A QUOTE →</a></nav>
       <img class="new-home-hero" src="assets/ChatGPT Image Sep 30, 2026, 11_48_54 AM.png" alt="Monolith Builders">  
     
-      <div class="project-choice-heading"><p>CHOOSE YOUR PROJECT</p><h2>What Would You Like to Transform?</h2></div>
+      <div id="services-start" class="project-choice-heading"><p>CHOOSE YOUR PROJECT</p><h2>What Would You Like to Transform?</h2></div>
       <div class="home-project-choices">
        <a href="#remodeling-projects"><img src="assets/remodeling-equal.png" alt="Explore Remodeling"></a>
         <a href="#construction-projects"><img src="assets/general-construction-equal.png" alt="Explore General Construction"></a>
@@ -169,7 +169,7 @@
   </section>
     <section id="about" class="service-area-section">
       <div>
-        <h2>About Monolith Builders</h2>
+       <h2 id="about-start">About Monolith Builders</h2>
         <p>Monolith Builders provides general construction, remodeling, and heating & cooling services throughout California.</p>
         </div>
       </section>
@@ -189,7 +189,7 @@
 </section>
 
 
-<section id="services" class="service-area-section">
+<section class="service-area-section">
   <div>
     <p class="eyebrow">SERVING CALIFORNIA</p>
     <h2>Built for California Homes &amp; Businesses</h2>
@@ -204,7 +204,7 @@
   <button type="button" class="planner-page-back">← BACK</button>
   <div class="planner-heading">
     <p class="eyebrow">PROJECT PLANNER</p>
-    <h2>PLAN YOUR PROJECT STEP BY STEP.</h2>
+    <h2 id="planner-start">PLAN YOUR PROJECT STEP BY STEP.</h2>
     <p>Answer a few questions so we can understand your project before you contact us. Public pricing is intentionally not shown.</p>
   </div>
 
@@ -271,7 +271,7 @@
 
 <section id="contact" class="section contact">
       <div class="wrap contact-inner">
-        <div><p class="eyebrow">START YOUR PROJECT</p><h1>Tell us what you want to build or remodel.</h1><p>All project sizes are welcome.</p></div>
+        <div id="contact-start"><p class="eyebrow">START YOUR PROJECT</p><h1>Tell us what you want to build or remodel.</h1><p>All project sizes are welcome.</p></div>
         <div class="contact-actions"><a href="tel:+12796750675" aria-label="Call Monolith Builders at 279-675-0675">(279) 675-0675</a><a href="mailto:info@monolithbuildersinc.com" aria-label="Email Monolith Builders">info@monolithbuildersinc.com</a></div>
       </div>
     
@@ -292,7 +292,7 @@
   <label>HOW CAN WE HELP?
     <textarea name="message" rows="5" placeholder="Tell us a little about your project."></textarea>
   </label>
-  <button id="quote-request" type="submit">SEND QUOTE REQUEST</button>
+  <button type="submit">SEND QUOTE REQUEST</button>
   <p class="form-note">Submitting opens your email app with the project details addressed to Monolith Builders.</p>
 </form>
 </section>
