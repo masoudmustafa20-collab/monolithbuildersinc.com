@@ -59,7 +59,7 @@
   <main>
     
     <section id="home" class="master" aria-label="Monolith Builders homepage introduction">
-    <nav class="top-nav"><a href="#home">Home</a><a href="#services">Services</a><a href="#remodeling-projects">Gallery</a><a href="#project-planner">Project Planner</a><a href="#about">About</a><a href="#contact">Contact</a><a class="nav-quote" href="#contact">GET A QUOTE →</a></nav>
+    <nav class="top-nav"><a href="#home">Home</a><a href="#services">Services</a><a href="#gallery">Gallery</a><a href="#project-planner">Project Planner</a><a href="#about">About</a><a href="#quote-request">Contact</a><a class="nav-quote" href="#quote-request">GET A QUOTE →</a></nav>
       <img class="new-home-hero" src="assets/ChatGPT Image Sep 30, 2026, 11_48_54 AM.png" alt="Monolith Builders">  
     
       <div class="project-choice-heading"><p>CHOOSE YOUR PROJECT</p><h2>What Would You Like to Transform?</h2></div>
@@ -88,7 +88,7 @@
     <p>From practical everyday updates to high-end transformations, every project matters.</p>
   </div>
   <div class="project-grid">
-    <article class="project-card" data-gallery="kitchen" role="group">
+    <article id="gallery" class="project-card" data-gallery="kitchen" role="group">
       <img src="assets/remodeling-kitchen-color.jpg?v=kitchen-main-clear" alt="Finished kitchen remodeling project" loading="lazy" data-open-service="kitchen-remodeling" role="button" tabindex="0" aria-label="Open Kitchen Remodeling gallery" decoding="async">
       <div class="project-copy"><h3>Kitchen Remodeling</h3><p>Functional upgrades, complete renovations, and custom kitchens.</p></div>
     
@@ -292,7 +292,7 @@
   <label>HOW CAN WE HELP?
     <textarea name="message" rows="5" placeholder="Tell us a little about your project."></textarea>
   </label>
-  <button type="submit">SEND QUOTE REQUEST</button>
+  <button id="quote-request" type="submit">SEND QUOTE REQUEST</button>
   <p class="form-note">Submitting opens your email app with the project details addressed to Monolith Builders.</p>
 </form>
 </section>
