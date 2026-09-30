@@ -1217,3 +1217,4 @@ body {
 }
 
 .top-nav{display:flex;align-items:center;justify-content:center;gap:34px;padding:18px 30px;background:#fff;position:relative;z-index:100}.top-nav a{color:#111;text-decoration:none;font-weight:600}.top-nav .nav-quote{background:#d5a62e;padding:14px 24px;font-weight:800}
+.top-contact{display:flex;justify-content:center;align-items:center;gap:24px;padding:8px 20px;background:#fff;color:#111;font-size:15px;position:relative;z-index:100}.top-contact a{color:#111;text-decoration:none}.top-contact a:hover{text-decoration:underline}
