@@ -1215,3 +1215,5 @@ body {
   width: 8%;
   height: 7%;
 }
+
+.top-nav{display:flex;align-items:center;justify-content:center;gap:34px;padding:18px 30px;background:#fff;position:relative;z-index:100}.top-nav a{color:#111;text-decoration:none;font-weight:600}.top-nav .nav-quote{background:#d5a62e;padding:14px 24px;font-weight:800}
