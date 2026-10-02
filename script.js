@@ -1261,64 +1261,70 @@ document.addEventListener('click', function(e){
   let sending = false;
 
   form.addEventListener('submit', function(e){
-    if (sending) {
-      e.preventDefault();
-      return;
+    var button = e.submitter;
+    var buttonText = button ? ((button.textContent || '') + ' ' + (button.value || '')) : '';
+
+    if (!/SEND PROJECT REQUEST/i.test(buttonText)) {
+        e.preventDefault();
+        return;
     }
 
-    // Respect all existing validation before allowing the final action.
+    if (sending) {
+        e.preventDefault();
+        return;
+    }
+
     if (typeof form.checkValidity === 'function' && !form.checkValidity()) {
-      e.preventDefault();
-      form.reportValidity();
-      return;
+        e.preventDefault();
+        form.reportValidity();
+        return;
     }
 
     const service = sessionStorage.getItem('monolithSelectedService') || '';
     const serviceFields = form.querySelectorAll('input[name="service"], input[name="selected_service"]');
+
     serviceFields.forEach(function(field){
-      if (service) field.value = service;
+        if (service) field.value = service;
     });
 
-   e.preventDefault();
+    e.preventDefault();
 
-const data = new FormData(form);
-const details = Array.from(data.entries())
-  .map(function(item){ return item[0] + ': ' + item[1]; })
-  .join('\n');
+    const data = new FormData(form);
 
-const submit = form.querySelector('[type="submit"]');
+    const submit = form.querySelector('[type="submit"]');
 
-if (submit) {
-  submit.dataset.originalText = submit.textContent;
-  submit.textContent = 'SENDING REQUEST...';
-  submit.setAttribute('aria-disabled', 'true');
-}
+    if (submit) {
+        submit.dataset.originalText = submit.textContent;
+        submit.textContent = 'SENDING REQUEST...';
+        submit.setAttribute('aria-disabled', 'true');
+    }
 
-sending = true;
+    sending = true;
 
-fetch('https://formspree.io/f/mvkgnjew', {
-  method: 'POST',
-  body: data,
-  headers: {
-    'Accept': 'application/json'
-  }
-})
-.then(function(response){
-  if (!response.ok) throw new Error('Form submission failed');
-  return response.json();
-})
-.then(function(){
-  if (submit) {
-    submit.textContent = 'REQUEST SENT ✓';
-  }
-  sending = false;
-})
-.catch(function(){
-  if (submit) {
-    submit.textContent = 'SEND FAILED — TRY AGAIN';
-    submit.removeAttribute('aria-disabled');
-  }
-  sending = false;
+    fetch('https://formspree.io/f/mvkgnjew', {
+        method: 'POST',
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+    })
+    .then(function(response){
+        if (!response.ok) throw new Error('Form submission failed');
+        return response.json();
+    })
+    .then(function(){
+        if (submit) {
+            submit.textContent = 'REQUEST SENT ✓';
+        }
+        sending = false;
+    })
+    .catch(function(){
+        if (submit) {
+            submit.textContent = 'SEND FAILED — TRY AGAIN';
+            submit.removeAttribute('aria-disabled');
+        }
+        sending = false;
+    });
 });
 })();
 
