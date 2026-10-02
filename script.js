@@ -678,41 +678,7 @@ document.addEventListener("DOMContentLoaded", function(){
     else step.appendChild(p);
   }
 
-  form.querySelectorAll(".planner-next").forEach(function(btn){
-    btn.addEventListener("click", function(e){
-      const step = btn.closest(".planner-step");
-      if (!step) return;
-
-      const n = step.getAttribute("data-step");
-      clearError(step);
-
-      if (n === "1" && !step.querySelector('input[name="project_type"]:checked')) {
-        e.stopImmediatePropagation();
-        showError(step, "Please choose the type of work before continuing.");
-        return;
-      }
-
-      if (n === "2") {
-        const area = step.querySelector('input[name="project_area"]');
-        if (!area || !area.value.trim()) {
-          e.stopImmediatePropagation();
-          showError(step, "Please tell us where the project is located in the home or property.");
-          if (area) area.focus();
-          return;
-        }
-      }
-
-      if (n === "3") {
-        const details = step.querySelector('textarea[name="details"]');
-        if (!details || details.value.trim().length < 10) {
-          e.stopImmediatePropagation();
-          showError(step, "Please give us a short description of the work.");
-          if (details) details.focus();
-          return;
-        }
-      }
-    }, true);
-  });
+  
 
   form.addEventListener("submit", function(e){
     const finalStep = form.querySelector('.planner-step[data-step="4"]');
