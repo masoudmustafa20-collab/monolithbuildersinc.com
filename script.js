@@ -145,7 +145,7 @@ document.addEventListener("DOMContentLoaded", function(){
     document.getElementById("project-planner").scrollIntoView({behavior:"smooth", block:"start"});
   }
 
-  
+  form.querySelectorAll(".planner-next").forEach(btn => btn.addEventListener("click", () => showStep(current + 1)));
   form.querySelectorAll(".planner-back").forEach(btn => btn.addEventListener("click", () => showStep(current - 1)));
 
   form.addEventListener("submit", function(e){
