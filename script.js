@@ -1279,28 +1279,47 @@ document.addEventListener('click', function(e){
       if (service) field.value = service;
     });
 
-    e.preventDefault();
-const data = new FormData(form);
-const details = Array.from(data.entries()).map(function(item){ return item[0] + ': ' + item[1]; }).join('\n');
-const subject = encodeURIComponent('New Project Request - Monolith Builders');
-const body = encodeURIComponent(details);
-window.location.href = 'mailto:info@monolithbuildersinc.com?subject=' + subject + '&body=' + body;
-sending = true;
-    const submit = form.querySelector('[type="submit"]');
-    if (submit) {
-      submit.dataset.originalText = submit.textContent;
-      submit.textContent = 'PREPARING REQUEST…';
-      submit.setAttribute('aria-disabled','true');
-    }
+   e.preventDefault();
 
-    window.setTimeout(function(){
-      sending = false;
-      if (submit) {
-        submit.textContent = submit.dataset.originalText || 'SEND PROJECT REQUEST →';
-        submit.removeAttribute('aria-disabled');
-      }
-    }, 1800);
-  }, true);
+const data = new FormData(form);
+const details = Array.from(data.entries())
+  .map(function(item){ return item[0] + ': ' + item[1]; })
+  .join('\n');
+
+const submit = form.querySelector('[type="submit"]');
+
+if (submit) {
+  submit.dataset.originalText = submit.textContent;
+  submit.textContent = 'SENDING REQUEST...';
+  submit.setAttribute('aria-disabled', 'true');
+}
+
+sending = true;
+
+fetch('https://formspree.io/f/mvkgnjew', {
+  method: 'POST',
+  body: data,
+  headers: {
+    'Accept': 'application/json'
+  }
+})
+.then(function(response){
+  if (!response.ok) throw new Error('Form submission failed');
+  return response.json();
+})
+.then(function(){
+  if (submit) {
+    submit.textContent = 'REQUEST SENT ✓';
+  }
+  sending = false;
+})
+.catch(function(){
+  if (submit) {
+    submit.textContent = 'SEND FAILED — TRY AGAIN';
+    submit.removeAttribute('aria-disabled');
+  }
+  sending = false;
+});
 })();
 
 
