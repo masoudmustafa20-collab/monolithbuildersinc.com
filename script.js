@@ -1279,7 +1279,13 @@ document.addEventListener('click', function(e){
       if (service) field.value = service;
     });
 
-    sending = true;
+    e.preventDefault();
+const data = new FormData(form);
+const details = Array.from(data.entries()).map(function(item){ return item[0] + ': ' + item[1]; }).join('\n');
+const subject = encodeURIComponent('New Project Request - Monolith Builders');
+const body = encodeURIComponent(details);
+window.location.href = 'mailto:info@monolithbuildersinc.com?subject=' + subject + '&body=' + body;
+sending = true;
     const submit = form.querySelector('[type="submit"]');
     if (submit) {
       submit.dataset.originalText = submit.textContent;
