@@ -149,30 +149,34 @@ document.addEventListener("DOMContentLoaded", function(){
   form.querySelectorAll(".planner-back").forEach(btn => btn.addEventListener("click", () => showStep(current - 1)));
 
   form.addEventListener("submit", function(e){
-    e.preventDefault();
-    const d = new FormData(form);
-    const service = d.get("service") || "Website Project";
-    const subject = "New Project Request - " + service;
-    const body = [
-      "MONOLITH BUILDERS INC. - PROJECT REQUEST",
-      "",
-      "Requested service: " + service,
-      "Project type: " + (d.get("project_type") || ""),
-      "Project area: " + (d.get("project_area") || ""),
-      "Preferred timing: " + (d.get("timeline") || ""),
-      "",
-      "Project details:",
-      d.get("details") || "",
-      "",
-      "Name: " + (d.get("name") || ""),
-      "Phone: " + (d.get("phone") || ""),
-      "Email: " + (d.get("email") || "")
-    ].join("\n");
-    window.location.href = "mailto:info@monolithbuildersinc.com?subject=" +
-      encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  fetch("https://formspree.io/f/mvkgnjew", {
+    method: "POST",
+    body: data,
+    headers: {
+      "Accept": "application/json"
+    }
+  })
+  .then(function(response){
+    if (!response.ok) {
+      throw new Error("Form submission failed");
+    }
+    return response.json();
+  })
+  .then(function(){
+    form.innerHTML =
+      '<div style="padding:40px 0;">' +
+      '<h3>REQUEST SENT ✓</h3>' +
+      '<p>Thank you. Monolith Builders Inc. will contact you soon.</p>' +
+      '</div>';
+  })
+  .catch(function(){
+    alert("There was a problem sending your request. Please try again.");
   });
 });
-
 // v15: ADU gallery uses the same More / Back pattern.
 document.addEventListener("DOMContentLoaded", function(){
   const gallery = document.getElementById("adu-gallery");
