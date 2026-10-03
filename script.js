@@ -1644,11 +1644,15 @@ document.addEventListener("DOMContentLoaded", function(){
       form.reset();
 
       form.querySelectorAll(".planner-step").forEach(function(step, i){
-        step.classList.toggle("is-active", i === 0);
-        step.classList.remove("has-error");
-        const error = step.querySelector(".planner-error");
-        if (error) error.remove();
-      });
+  const active = i === 0;
+  step.hidden = !active;
+  step.classList.toggle("is-active", active);
+  step.classList.toggle("active", active);
+  step.setAttribute("aria-hidden", active ? "false" : "true");
+  step.classList.remove("has-error");
+  const error = step.querySelector(".planner-error");
+  if (error) error.remove();
+});
 
       const fill = form.querySelector(".planner-progress-fill");
       if (fill) fill.style.width = "20%";
