@@ -682,7 +682,7 @@ document.addEventListener("DOMContentLoaded", function(){
   
 
   form.addEventListener("submit", function(e){
-    const finalStep = form.querySelector('.planner-step[data-step="4"]');
+    const finalStep = form.querySelector('.planner-step[data-step="5"]');
     if (!finalStep) return;
     const name = finalStep.querySelector('input[name="name"]');
     const phone = finalStep.querySelector('input[name="phone"]');
