@@ -1629,3 +1629,39 @@ document.addEventListener('keydown', function(e){
 if ('scrollRestoration' in history) {
   history.scrollRestoration = 'manual';
 }
+// v92 — every GET A QUOTE opens the focused Project Planner at Step 1.
+document.addEventListener("DOMContentLoaded", function(){
+  const planner = document.getElementById("project-planner");
+  const form = document.getElementById("planner-form");
+  if (!planner || !form) return;
+
+  document.querySelectorAll('a[href="#project-planner"]').forEach(function(link){
+    if (link.classList.contains("request-service")) return;
+
+    link.addEventListener("click", function(e){
+      e.preventDefault();
+
+      form.reset();
+
+      form.querySelectorAll(".planner-step").forEach(function(step, i){
+        step.classList.toggle("is-active", i === 0);
+        step.classList.remove("has-error");
+        const error = step.querySelector(".planner-error");
+        if (error) error.remove();
+      });
+
+      const fill = form.querySelector(".planner-progress-fill");
+      if (fill) fill.style.width = "20%";
+
+      document.querySelectorAll(".service-gallery-view.is-open").forEach(function(gallery){
+        gallery.classList.remove("is-open");
+        gallery.setAttribute("aria-hidden", "true");
+      });
+
+      document.body.style.overflow = "";
+      document.body.classList.add("planner-mode");
+
+      window.scrollTo(0, 0);
+    });
+  });
+});
