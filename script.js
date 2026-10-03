@@ -177,6 +177,7 @@ document.addEventListener("DOMContentLoaded", function(){
     alert("There was a problem sending your request. Please try again.");
   });
 });
+});
 // v15: ADU gallery uses the same More / Back pattern.
 document.addEventListener("DOMContentLoaded", function(){
   const gallery = document.getElementById("adu-gallery");
