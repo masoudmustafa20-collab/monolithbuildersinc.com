@@ -1224,3 +1224,18 @@ body {
     gap:12px;
   }
 }
+
+/* v93 — focused Remodeling screen */
+body.remodeling-mode > *:not(main):not(.service-gallery-view){
+  display:none!important;
+}
+
+body.remodeling-mode main > *:not(#remodeling-projects){
+  display:none!important;
+}
+
+body.remodeling-mode #remodeling-projects{
+  display:block!important;
+  min-height:100vh;
+  padding-top:36px;
+}
