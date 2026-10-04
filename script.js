@@ -1709,4 +1709,15 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.add("construction-mode");
     window.scrollTo(0, 0);
   });
+
+ const constructionBack = constructionSection.querySelector(".construction-back");
+
+if (constructionBack) {
+  constructionBack.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.body.classList.remove("construction-mode");
+    window.scrollTo(0, 0);
+  });
+} 
 });
