@@ -1695,3 +1695,18 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+// v94 — open General Construction as a focused screen.
+document.addEventListener("DOMContentLoaded", function () {
+  const constructionLink = document.querySelector('.home-project-choices a[href="#construction-projects"]');
+  const constructionSection = document.getElementById("construction-projects");
+
+  if (!constructionLink || !constructionSection) return;
+
+  constructionLink.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.body.classList.add("construction-mode");
+    window.scrollTo(0, 0);
+  });
+});
