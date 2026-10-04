@@ -1301,3 +1301,20 @@ body.construction-mode #construction-projects{
   padding-top:36px !important;
   padding-bottom:18px !important;
 }
+
+/* v99 — move opened gallery content closer to BACK bar */
+.service-gallery-view .service-gallery-inner{
+  padding-bottom:40px !important;
+}
+
+.service-gallery-view .gallery-nav{
+  margin-top:0 !important;
+}
+
+.service-gallery-view .gallery-touch-hint{
+  margin-top:8px !important;
+}
+
+.service-gallery-view .gallery-request{
+  margin-top:18px !important;
+}
