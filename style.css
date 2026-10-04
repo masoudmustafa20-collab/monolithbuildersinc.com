@@ -1239,3 +1239,18 @@ body.remodeling-mode #remodeling-projects{
   min-height:100vh;
   padding-top:36px;
 }
+
+/* v94 — focused General Construction screen */
+body.construction-mode > *:not(main):not(.service-gallery-view){
+  display:none!important;
+}
+
+body.construction-mode main > *:not(#construction-projects){
+  display:none!important;
+}
+
+body.construction-mode #construction-projects{
+  display:block!important;
+  min-height:100vh;
+  padding-top:36px;
+}
