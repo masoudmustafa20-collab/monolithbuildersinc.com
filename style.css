@@ -1254,3 +1254,12 @@ body.construction-mode #construction-projects{
   min-height:100vh;
   padding-top:36px;
 }
+
+/* v95 — clean full-screen service galleries */
+.service-gallery-view .service-gallery-inner > header{
+  display:none !important;
+}
+
+.service-gallery-view .service-gallery-inner{
+  padding-top:24px;
+}
