@@ -1263,3 +1263,12 @@ body.construction-mode #construction-projects{
 .service-gallery-view .service-gallery-inner{
   padding-top:24px;
 }
+
+/* v96 — simplify service gallery top bar */
+.service-gallery-view .service-gallery-topbar h3{
+  display:none !important;
+}
+
+.service-gallery-view .service-gallery-topbar{
+  padding-top:24px;
+}
