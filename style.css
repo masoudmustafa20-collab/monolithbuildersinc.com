@@ -1272,3 +1272,14 @@ body.construction-mode #construction-projects{
 .service-gallery-view .service-gallery-topbar{
   padding-top:24px;
 }
+
+/* v97 - move gallery controls and images higher */
+.service-gallery-view .service-gallery-inner{
+  padding-top:0 !important;
+  margin-top:0 !important;
+}
+
+.service-gallery-view .gallery-controls{
+  margin-top:0 !important;
+  padding-top:0 !important;
+}
