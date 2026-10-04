@@ -1669,3 +1669,29 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   });
 });
+
+// v93 — open Remodeling as a focused screen.
+document.addEventListener("DOMContentLoaded", function () {
+  const remodelingLink = document.querySelector('.home-project-choices a[href="#remodeling-projects"]');
+  const remodelingSection = document.getElementById("remodeling-projects");
+
+  if (!remodelingLink || !remodelingSection) return;
+
+  remodelingLink.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    document.body.classList.add("remodeling-mode");
+    window.scrollTo(0, 0);
+  });
+
+  const backButton = remodelingSection.querySelector(".step-back");
+
+  if (backButton) {
+    backButton.addEventListener("click", function (e) {
+      e.preventDefault();
+
+      document.body.classList.remove("remodeling-mode");
+      window.scrollTo(0, 0);
+    });
+  }
+});
