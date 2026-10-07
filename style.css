@@ -1322,3 +1322,16 @@ body.construction-mode #construction-projects{
 #remodeling-projects .eyebrow {
   color: #8a5a00;
 }
+
+/* v101 — accessibility contrast fixes */
+#remodeling-projects .project-card p,
+.how-we-work p,
+.service-area-section p,
+.planner-section p {
+  color: #595959 !important;
+}
+
+.service-area-section .eyebrow,
+.planner-section .eyebrow {
+  color: #6b5600 !important;
+}
