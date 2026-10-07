@@ -1328,9 +1328,9 @@ body.construction-mode #construction-projects{
 .how-we-work p,
 .service-area-section p,
 .planner-section p {
-  color: #595959 !important;
-}
+  color: #444444 !important;
 
+}
 .service-area-section .eyebrow,
 .planner-section .eyebrow {
   color: #6b5600 !important;
