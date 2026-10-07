@@ -1325,7 +1325,7 @@ body.construction-mode #construction-projects{
 
 /* v101 — accessibility contrast fixes */
 #remodeling-projects .project-card p,
-.how-we-work p,
+.how-we-work article p,
 .service-area-section p,
 .planner-section p {
  color: #333333 !important;
