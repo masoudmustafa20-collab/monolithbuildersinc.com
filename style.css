@@ -1318,3 +1318,7 @@ body.construction-mode #construction-projects{
 .service-gallery-view .gallery-request{
   margin-top:18px !important;
 }
+/* v100 — accessibility contrast fix */
+#remodeling-projects .eyebrow {
+  color: #8a5a00;
+}
