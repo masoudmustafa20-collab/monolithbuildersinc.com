@@ -1766,7 +1766,8 @@ document.addEventListener("click", function(e) {
   e.preventDefault();
   e.stopImmediatePropagation();
 
-  document.body.classList.remove("planner-mode");
+ document.body.classList.remove("planner-mode");
+document.body.classList.remove("remodeling-mode", "construction-mode", "hvac-mode");
 
   const planner = document.getElementById("project-planner");
   if (planner) {
