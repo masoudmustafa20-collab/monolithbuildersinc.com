@@ -1738,3 +1738,21 @@ if (constructionBack) {
   });
 } 
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".planner-page-back").forEach(function (btn) {
+   btn.addEventListener("click", function (e) {
+      e.preventDefault();
+     e.stopPropagation();
+
+      document.body.classList.remove("planner-mode");
+
+      const planner = document.getElementById("project-planner");
+      if (planner) {
+        planner.classList.remove("active", "open", "is-open");
+      }
+
+      window.scrollTo(0, 0);
+    }, true);
+  });
+});
