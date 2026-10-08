@@ -1016,7 +1016,7 @@ document.querySelectorAll('.request-service[data-service-name]').forEach(functio
   }, true);
 });
 
-document.querySelectorAll('#project-planner .planner-back, .planner-approved-flow .planner-back').forEach(function(btn){
+document.querySelectorAll('#project-planner .planner-page-back, .planner-approved-flow .planner-page-back').forEach(function(btn){
   btn.addEventListener('click', function(e){
     e.preventDefault();
     e.stopImmediatePropagation();
