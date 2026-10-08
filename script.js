@@ -1756,3 +1756,31 @@ document.addEventListener("DOMContentLoaded", function () {
     }, true);
   });
 });
+
+
+// Fix TOP Project Planner BACK only.
+document.addEventListener("click", function(e) {
+  const back = e.target.closest("#project-planner .planner-page-back");
+  if (!back) return;
+
+  e.preventDefault();
+  e.stopImmediatePropagation();
+
+  document.body.classList.remove("planner-mode");
+
+  const planner = document.getElementById("project-planner");
+  if (planner) {
+    planner.classList.remove("active", "open", "is-open");
+  }
+
+  document.querySelectorAll(".service-gallery-view").forEach(function(gallery) {
+    gallery.classList.remove("active", "open", "is-open");
+    gallery.setAttribute("aria-hidden", "true");
+  });
+
+  document.body.style.overflow = "";
+
+  history.replaceState(null, "", "#home");
+  window.scrollTo(0, 0);
+}, true);
+
