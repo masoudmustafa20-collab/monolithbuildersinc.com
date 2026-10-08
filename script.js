@@ -138,12 +138,26 @@ document.addEventListener("DOMContentLoaded", function(){
   const fill = form.querySelector(".planner-progress-fill");
   let current = 0;
 
-  function showStep(i){
-    current = Math.max(0, Math.min(i, steps.length - 1));
-    steps.forEach((s, n) => s.classList.toggle("is-active", n === current));
-    if (fill) fill.style.width = (((current + 1) / steps.length) * 100) + "%";
-    document.getElementById("project-planner").scrollIntoView({behavior:"smooth", block:"start"});
+  
+function showStep(i) {
+  current = Math.max(0, Math.min(i, steps.length - 1));
+
+  steps.forEach((step, n) => {
+    const active = n === current;
+    step.hidden = !active;
+    step.classList.toggle("is-active", active);
+    step.classList.toggle("active", active);
+    step.setAttribute("aria-hidden", active ? "false" : "true");
+  });
+
+  if (fill) {
+    fill.style.width = (((current + 1) / steps.length) * 100) + "%";
   }
+
+  document.getElementById("project-planner")
+    .scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 
   form.querySelectorAll(".planner-next").forEach(btn => btn.addEventListener("click", () => showStep(current + 1)));
   form.querySelectorAll(".planner-back").forEach(btn => btn.addEventListener("click", () => showStep(current - 1)));
