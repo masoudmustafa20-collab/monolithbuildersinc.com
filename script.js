@@ -643,7 +643,8 @@ document.addEventListener("DOMContentLoaded", function(){
         g.setAttribute("aria-hidden","true");
       });
       document.body.style.overflow = "";
-      document.body.classList.add("planner-mode");
+     document.body.classList.remove("remodeling-mode", "construction-mode");
+document.body.classList.add("planner-mode");
       window.scrollTo(0,0);
     });
   });
@@ -796,7 +797,8 @@ document.addEventListener("DOMContentLoaded", function(){
       const err = step.querySelector(".planner-error");
       if (err) err.remove();
     });
-    document.body.classList.add("planner-mode");
+    document.body.classList.remove("remodeling-mode", "construction-mode");
+document.body.classList.add("planner-mode");
     window.scrollTo(0,0);
   });
 });
@@ -1663,7 +1665,8 @@ document.addEventListener("DOMContentLoaded", function(){
       });
 
       document.body.style.overflow = "";
-      document.body.classList.add("planner-mode");
+      document.body.classList.remove("remodeling-mode", "construction-mode");
+document.body.classList.add("planner-mode");
 
       window.scrollTo(0, 0);
     });
