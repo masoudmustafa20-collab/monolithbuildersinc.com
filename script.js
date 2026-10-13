@@ -841,7 +841,10 @@ document.addEventListener("DOMContentLoaded", function(){
       const target = document.querySelector(href);
       if (!target) return;
       e.preventDefault();
-      target.scrollIntoView({behavior:"smooth", block:"start"});
+     target.scrollIntoView({
+  behavior: href === "#service-areas" ? "instant" : "smooth",
+  block: "start"
+});
       try { history.replaceState(null, "", href); } catch (_) {}
     });
   });
