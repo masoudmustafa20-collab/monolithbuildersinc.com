@@ -1344,9 +1344,3 @@ body.construction-mode #construction-projects{
   }
 }
 
-/* Mobile: use only the mobile navigation header */
-@media (max-width: 700px) {
-  #home .top-nav {
-    display: none !important;
-  }
-}
