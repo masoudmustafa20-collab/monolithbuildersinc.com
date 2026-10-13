@@ -1343,3 +1343,10 @@ body.construction-mode #construction-projects{
     display: none !important;
   }
 }
+
+/* Mobile: use only the mobile navigation header */
+@media (max-width: 700px) {
+  #home .top-nav {
+    display: none !important;
+  }
+}
