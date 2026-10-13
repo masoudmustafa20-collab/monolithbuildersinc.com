@@ -1335,3 +1335,11 @@ body.construction-mode #construction-projects{
 .planner-section .eyebrow {
   color: #6b5600 !important;
 }
+
+
+/* Hide Remodeling BACK on mobile homepage only */
+@media (max-width: 700px) {
+  body:not(.remodeling-mode) #remodeling-projects .step-topbar {
+    display: none !important;
+  }
+}
