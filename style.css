@@ -1349,12 +1349,12 @@ body.construction-mode #construction-projects{
 #home .top-contact {
   position: absolute;
  top: 95px;
-  right: 24px;
+  right: 200px;
   z-index: 101;
   background: transparent;
   padding: 0;
   gap: 12px;
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.4;
 }
