@@ -1353,7 +1353,7 @@ body.construction-mode #construction-projects{
   z-index: 101;
   background: transparent;
   padding: 0;
-  gap: 12px;
+  gap: 6px;
   font-size: 20px;
   font-weight: 600;
   line-height: 1.4;
@@ -1362,4 +1362,25 @@ body.construction-mode #construction-projects{
 #home .top-contact a {
   color: #fff;
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+/* Mobile contact information */
+@media (max-width: 700px) {
+  #home .top-contact {
+   top: 85px;
+    right: 12px;
+    left: auto;
+    width: auto;
+    max-width: 65%;
+    gap: 6px;
+    font-size: 11px;
+    line-height: 1.4;
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  #home .top-contact a {
+    font-size: inherit;
+    overflow-wrap: anywhere;
+  }
 }
