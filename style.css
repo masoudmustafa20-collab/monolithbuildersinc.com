@@ -1344,3 +1344,22 @@ body.construction-mode #construction-projects{
   }
 }
 
+
+/* Contact information over the main hero image */
+#home .top-contact {
+  position: absolute;
+  top: 110px;
+  right: 24px;
+  z-index: 101;
+  background: transparent;
+  padding: 0;
+  gap: 24px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+#home .top-contact a {
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.8);
+}
