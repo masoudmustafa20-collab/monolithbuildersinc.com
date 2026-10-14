@@ -1367,7 +1367,7 @@ body.construction-mode #construction-projects{
 /* Mobile contact information */
 @media (max-width: 700px) {
   #home .top-contact {
-   top: 85px;
+  top: 10px;
     right: 12px;
     left: auto;
     width: auto;
