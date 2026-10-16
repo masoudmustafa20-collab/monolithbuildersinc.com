@@ -1118,7 +1118,11 @@ body {
  
   margin: 20px auto 40px;
 }
-
+#construction-projects .construction-card:nth-of-type(2) img {
+  width: 70%;
+  height: 300px;
+  object-fit: cover;
+}
 #construction-projects .construction-card {
   margin-bottom: 80px;
 }
