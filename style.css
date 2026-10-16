@@ -1114,8 +1114,8 @@ body {
 #construction-projects .construction-card img {
   display: block;
   width: 70%;
-  height: 300px;
-  object-fit: cover;
+  height:auto;
+ 
   margin: 20px auto 40px;
 }
 
