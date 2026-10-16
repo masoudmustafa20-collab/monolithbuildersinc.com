@@ -1114,14 +1114,9 @@ body {
 #construction-projects .construction-card img {
   display: block;
   width: 70%;
-  height:auto;
- 
-  margin: 20px auto 40px;
-}
-#construction-projects img[src*="home-additions-1200-q78-v2.webp"] {
-  width: 70%;
-  height: 400px;
+  height: 350px;
   object-fit: cover;
+  margin: 20px auto 40px;
 }
 #construction-projects .construction-card {
   margin-bottom: 80px;
