@@ -1418,3 +1418,8 @@ body.construction-mode #construction-projects{
 #living-room-remodeling-gallery .service-gallery-images img:not(.is-gallery-active) {
   display: none;
 }
+/* Display only the selected Kitchen or Living Room gallery photo */
+#kitchen-remodeling-gallery .service-gallery-images img.is-gallery-active,
+#living-room-remodeling-gallery .service-gallery-images img.is-gallery-active {
+  display: block;
+}
