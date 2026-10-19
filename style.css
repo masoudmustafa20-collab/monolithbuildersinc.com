@@ -1401,14 +1401,16 @@ body.construction-mode #construction-projects{
 }
 
 
-/* Kitchen and Living Room galleries — consistent image frames */
+
+/* Kitchen and Living Room galleries — uniform image dimensions */
 #kitchen-remodeling-gallery .service-gallery-images img,
 #living-room-remodeling-gallery .service-gallery-images img {
   width: 100%;
-  height: min(60vh, 550px);
-  max-height: none;
-  aspect-ratio: auto;
-  object-fit: contain;
+  height: 550px;
+  max-height: 60vh;
+  object-fit: cover;
+  object-position: center;
   background: #fff;
 }
+
 
