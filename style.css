@@ -1423,3 +1423,8 @@ body.construction-mode #construction-projects{
 #living-room-remodeling-gallery .service-gallery-images img.is-gallery-active {
   display: block;
 }
+
+html:has(#kitchen-remodeling-gallery.is-open),
+html:has(#living-room-remodeling-gallery.is-open) {
+  overflow: hidden;
+}
