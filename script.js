@@ -507,8 +507,10 @@ document.addEventListener("DOMContentLoaded", function(){
   document.querySelectorAll(".service-gallery-view").forEach(function(view){
     const holder = view.querySelector(".service-gallery-images");
     if (!holder) return;
-    const imgs = Array.from(holder.querySelectorAll("img"));
-    if (!imgs.length) return;
+  const isKitchen = view.id === "kitchen-remodeling-gallery";
+const imgs = Array.from(holder.querySelectorAll(isKitchen ? ".kitchen-slide" : "img"));
+if (!imgs.length) return;
+
 
     let current = 0;
     const nav = document.createElement("div");
