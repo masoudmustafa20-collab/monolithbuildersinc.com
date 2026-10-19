@@ -1428,3 +1428,36 @@ html:has(#kitchen-remodeling-gallery.is-open),
 html:has(#living-room-remodeling-gallery.is-open) {
   overflow: hidden;
 }
+
+
+/* Kitchen gallery: four slides, with Before/After on slide one */
+#kitchen-remodeling-gallery .service-gallery-images .kitchen-slide {
+  display: none;
+  width: 100%;
+}
+
+#kitchen-remodeling-gallery .service-gallery-images .kitchen-slide.is-gallery-active {
+  display: block;
+}
+
+#kitchen-remodeling-gallery .service-gallery-images .kitchen-slide img:not(.is-gallery-active) {
+  display: block;
+}
+
+#kitchen-remodeling-gallery .kitchen-before-after {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+#kitchen-remodeling-gallery .kitchen-before-after figure {
+  margin: 0;
+  min-width: 0;
+}
+
+#kitchen-remodeling-gallery .kitchen-before-after figcaption {
+  text-align: center;
+  font-weight: 700;
+  padding-top: 8px;
+}
+
