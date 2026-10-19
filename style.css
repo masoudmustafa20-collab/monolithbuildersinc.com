@@ -1461,3 +1461,16 @@ html:has(#living-room-remodeling-gallery.is-open) {
   padding-top: 8px;
 }
 
+
+/* Consistent sizing for Kitchen slides 2, 3, and 4 */
+#kitchen-remodeling-gallery .service-gallery-images .kitchen-slide > img {
+  display: block;
+  width: 100%;
+  height: 550px;
+  max-height: 60vh;
+  object-fit: contain;
+  object-position: center;
+  background: #fff;
+}
+
+
