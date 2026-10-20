@@ -1790,3 +1790,22 @@ document.body.classList.remove("remodeling-mode", "construction-mode", "hvac-mod
   window.scrollTo(0, 0);
 }, true);
 
+
+// Open Project Planner when arriving from another page.
+document.addEventListener("DOMContentLoaded", function () {
+  if (window.location.hash !== "#project-planner") return;
+
+  const planner = document.getElementById("project-planner");
+  if (!planner) return;
+
+  document.body.classList.remove(
+    "remodeling-mode",
+    "construction-mode",
+    "hvac-mode"
+  );
+  document.body.classList.add("planner-mode");
+
+  window.scrollTo(0, 0);
+});
+
+
