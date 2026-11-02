@@ -1472,5 +1472,9 @@ html:has(#living-room-remodeling-gallery.is-open) {
   object-position: center;
   background: #fff;
 }
+body:not(.remodeling-mode) #remodeling-projects > .step-topbar,
+body:not(.construction-mode) #construction-projects .construction-back {
+  display: none;
+}
 
 
