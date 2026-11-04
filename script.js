@@ -467,41 +467,6 @@ document.addEventListener("DOMContentLoaded", function(){
   });
 });
 
-// v23: Heating & Cooling gallery.
-document.addEventListener("DOMContentLoaded", function(){
-  const gallery = document.getElementById("heating-cooling-gallery");
-  if (!gallery) return;
-  let previousScroll = 0;
-
-  document.querySelectorAll('[data-open-service="heating-cooling"]').forEach(function(btn){
-    btn.addEventListener("click", function(){
-      previousScroll = window.scrollY;
-      gallery.classList.add("is-open");
-      gallery.setAttribute("aria-hidden","false");
-      document.body.style.overflow = "hidden";
-      gallery.scrollTop = 0;
-    });
-  });
-
-  const back = gallery.querySelector(".gallery-back");
-  if (back) back.addEventListener("click", function(){
-    gallery.classList.remove("is-open");
-    gallery.setAttribute("aria-hidden","true");
-    document.body.style.overflow = "";
-    window.scrollTo(0, previousScroll);
-  });
-
-  gallery.querySelectorAll('[data-service-name]').forEach(function(link){
-    link.addEventListener("click", function(){
-      const field = document.getElementById("planner-service");
-      if (field) field.value = "Heating & Cooling";
-      gallery.classList.remove("is-open");
-      gallery.setAttribute("aria-hidden","true");
-      document.body.style.overflow = "";
-    });
-  });
-});
-
 // v24: all service galleries are now touch/click viewers.
 document.addEventListener("DOMContentLoaded", function(){
   document.querySelectorAll(".service-gallery-view").forEach(function(view){
@@ -966,8 +931,7 @@ const remodelingImageMap = {
   'bathroom':'bathroom-remodeling',
   'living':'living-room-remodeling',
   'bedroom':'bedroom-remodeling',
-  'outdoor':'outdoor-living',
-  'hvac':'heating-cooling'
+  'outdoor':'outdoor-living'
 };
 document.querySelectorAll('#remodeling-projects .project-card').forEach(function(card){
   const key = card.dataset.gallery;
@@ -1772,7 +1736,7 @@ document.addEventListener("click", function(e) {
   e.stopImmediatePropagation();
 
  document.body.classList.remove("planner-mode");
-document.body.classList.remove("remodeling-mode", "construction-mode", "hvac-mode");
+document.body.classList.remove("remodeling-mode", "construction-mode");
 
   const planner = document.getElementById("project-planner");
   if (planner) {
@@ -1800,8 +1764,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   document.body.classList.remove(
     "remodeling-mode",
-    "construction-mode",
-    "hvac-mode"
+    "construction-mode"
   );
   document.body.classList.add("planner-mode");
 
