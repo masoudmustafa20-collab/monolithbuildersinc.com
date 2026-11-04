@@ -931,7 +931,8 @@ const remodelingImageMap = {
   'bathroom':'bathroom-remodeling',
   'living':'living-room-remodeling',
   'bedroom':'bedroom-remodeling',
-  'outdoor':'outdoor-living'
+  'outdoor':'outdoor-living',
+  'small':'small-projects'
 };
 document.querySelectorAll('#remodeling-projects .project-card').forEach(function(card){
   const key = card.dataset.gallery;
