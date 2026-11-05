@@ -1478,3 +1478,24 @@ body:not(.construction-mode) #construction-projects .construction-back {
 }
 
 
+
+/* Consistent Small Projects slideshow frame on desktop and mobile. */
+#small-projects-gallery .service-gallery-images {
+  width: 100%;
+  max-width: 1100px;
+}
+#small-projects-gallery .service-gallery-images img {
+  width: 100% !important;
+  height: min(550px, 60vh) !important;
+  max-height: none !important;
+  aspect-ratio: auto !important;
+  object-fit: contain !important;
+  object-position: center;
+  background: #fff;
+}
+#small-projects-gallery .service-gallery-images img:not(.is-gallery-active) {
+  display: none !important;
+}
+#small-projects-gallery .service-gallery-images img.is-gallery-active {
+  display: block !important;
+}

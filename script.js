@@ -1773,3 +1773,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+
+// Label the active Small Projects photo, including fireplace before and after.
+document.addEventListener('DOMContentLoaded', function () {
+  const holder = document.querySelector('#small-projects-gallery .service-gallery-images');
+  if (!holder) return;
+  const caption = document.createElement('p');
+  caption.setAttribute('aria-live', 'polite');
+  caption.style.cssText = 'text-align:center;font-weight:700;margin:12px 0';
+  holder.insertAdjacentElement('beforebegin', caption);
+  function updateCaption() {
+    const active = holder.querySelector('img.is-gallery-active');
+    caption.textContent = active ? active.alt : '';
+  }
+  new MutationObserver(updateCaption).observe(holder, {subtree:true, attributes:true, attributeFilter:['class']});
+  updateCaption();
+});
